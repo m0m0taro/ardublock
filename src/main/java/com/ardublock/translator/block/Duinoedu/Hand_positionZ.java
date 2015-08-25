@@ -13,7 +13,12 @@ public class Hand_positionZ extends TranslatorBlock
 
 	@Override
 	public String toCode() throws SocketNullException {
-		return codePrefix + "hand_positionZ" + codeSuffix;
+		translator.addHeaderFile("SerialPlus.h");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_SerialPlus/");
+		translator.addDefinitionCommand("SerialPlus monSerialLeap;");
+		translator.addSetupCommand("monSerialLeap.branch(&Serial); \nmonSerialLeap.begin(9600);");
+		//return codePrefix + "hand_positionZ" + codeSuffix;
+		return codePrefix + "monSerialLeap.readNbr(CANAL82)" + codeSuffix;
 	}
 
 }

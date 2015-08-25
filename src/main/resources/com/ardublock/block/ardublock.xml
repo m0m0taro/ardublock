@@ -2018,6 +2018,66 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_number" kind="command" color="232 156 149" initlabel="bg.Serialplus_send_variable_number">
+			<description>
+				<text>Send integer variable</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_digital" kind="command" color="204 153 255" initlabel="bg.Serialplus_send_variable_digital">
+			<description>
+				<text>Send digital </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_number" kind="data" color="232 156 149" initlabel="bg.Serialplus_receive_number">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_digital" kind="data" color="204 153 255" initlabel="bg.Serialplus_receive_digital">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Storage *************** -->
 		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
@@ -2112,6 +2172,9 @@
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
 					<DefaultArg genus-name="true" label="True" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -2192,6 +2255,56 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
+					<DefaultArg genus-name="glue_msg" label="file.txt" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Write" kind="command" color="0 255 0" initlabel="bg.MaSD_Write">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_NewLine" kind="command" color="0 255 0" initlabel="bg.MaSD_NewLine">
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="GROVE_CS" kind="data" color="214 169 54" initlabel="bg.GROVE_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DUPONT_CS" kind="data" color="214 169 54" initlabel="bg.DUPONT_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_CS" kind="data" color="214 169 54" initlabel="bg.ESPLORA_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Connect" kind="command" color="0 255 0" initlabel="bg.MaSD_Connect">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="GROVE_CS" label="GROVE_CS" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_separator" kind="command" color="0 255 0" initlabel="bg.MaSD_separator">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.space">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.tab">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Especial Menu *************** -->
 
@@ -6185,16 +6298,6 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="DuinoEDU_leapmotion_init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_leapmotion_init">
-			<description>
-				<text>Leap motion init</text>
-			</description>
-			<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
 		<BlockGenus name="DuinoEDU_hand_positionX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionX">
 			<description>
 				<text>DuinoEDU_hand_positionX</text>
@@ -7096,9 +7199,6 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YEnd">
 					<DefaultArg genus-name="number" label="50" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
-					<DefaultArg genus-name="number" label="100" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
 					<DefaultArg genus-name="number" label="255" />
@@ -10667,6 +10767,11 @@
 			<FamilyMember>ESPLORA_INB</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>GROVE_CS</FamilyMember>
+			<FamilyMember>DUPONT_CS</FamilyMember>
+			<FamilyMember>ESPLORA_CS</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10815,10 +10920,13 @@
 				<BlockGenusMember>DuinoEDU_Guino_pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_leapmotion_init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_digital</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_digital</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
@@ -10839,6 +10947,11 @@
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
 				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
+				<BlockGenusMember>MaSD_Connect</BlockGenusMember>
+				<BlockGenusMember>MaSD_file</BlockGenusMember>
+				<BlockGenusMember>MaSD_Write</BlockGenusMember>
+				<BlockGenusMember>MaSD_NewLine</BlockGenusMember>
+				<BlockGenusMember>MaSD_separator</BlockGenusMember>
 				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
