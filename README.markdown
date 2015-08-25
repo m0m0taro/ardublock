@@ -8,7 +8,7 @@ Preliminary
 * Install [Apache Maven](http://maven.apache.org/)
 * Install [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * Add `JAVA_HOME` environment variable pointing to JDK directory (e.g., `JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_31"`)
-* Clone `https://github.com/Icewire-Makerspace/openblocks.git` and run `mvn install`
+* Clone `https://github.com/taweili/openblocks.git` and run `mvn install`
 
 Installation
 ----
