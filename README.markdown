@@ -35,7 +35,7 @@ Development
 
 	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
 
-The Visual Block environment should show up.
+The Visual Block environment should show up. Happy Hacking! ;)
 
 Deploy
 ----
