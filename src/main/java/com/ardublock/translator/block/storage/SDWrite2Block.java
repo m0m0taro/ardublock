@@ -15,7 +15,7 @@ public class SDWrite2Block extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-	    translator.addDefinitionCommand("#include <SD.h>\n");
+		translator.addHeaderFile("SD.h");
 	    translator.addSetupCommand("\tconst int chipSelect = 10;\n\tSD.begin(chipSelect);\n");
 		TranslatorBlock data = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret="\tFile datafile = SD.open(\""+data.toCode()+"\", FILE_WRITE);\n";
