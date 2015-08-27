@@ -43,7 +43,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.increment">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<!-- ******************** Controls Menu *************** -->
@@ -151,7 +151,7 @@
             </text>
           </description>
           <BlockConnectors>
-            <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+            <BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
             <BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean">
               <DefaultArg genus-name="less" label="Pick a test" />
             </BlockConnector>    
@@ -160,7 +160,7 @@
 		
 		<BlockGenus name="break" kind="command" color="255 221 0" initlabel="bg.break">
 			<description>
-				<text>Repeat the commands for "times"</text>
+				<text>break</text>
 			</description>
 		</BlockGenus>
 
@@ -568,7 +568,7 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number" >
 					<DefaultArg genus-name="PORTA2" label="PORTA" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="0">
@@ -1076,7 +1076,7 @@
 
 		<BlockGenus name="string_equal" kind="data" color="222 131 51" initlabel="bg.string_equal">
 			<description>
-				<text>is upper string greater then lower?</text>
+				<text>are two strings equal?</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean" />
@@ -1269,7 +1269,7 @@
 		
 		<BlockGenus name="string_equal" kind="function" color="222 131 51" initlabel="bg.string_equal">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>compare two char array using strcmp()</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
@@ -1283,7 +1283,7 @@
 		
 		<BlockGenus name="string_empty" kind="function" color="222 131 51" initlabel="bg.string_empty">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>true if char array is empty</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug">
@@ -1295,7 +1295,7 @@
 
 				<BlockGenus name="equal_string" kind="function" color="222 131 51" initlabel="bg.equal_string">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>compare two string just use double equal</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
@@ -1309,7 +1309,7 @@
 		
 		<BlockGenus name="not_equal_string" kind="function" color="222 131 51" initlabel="bg.not_equal_string">
 			<description>
-				<text>is upper number greater then lower?</text>
+				<text>true if not equal string </text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
@@ -1590,7 +1590,7 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_poly" label="char variable name" />
 				</BlockConnector>
-				<BlockConnector connector-type="poly" connector-kind="socket" label="char">
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.char">
 					<DefaultArg genus-name="char" label="A" />
 				</BlockConnector>
 
@@ -1714,6 +1714,11 @@
 					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/ultrasonic.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="LCD_I2C_Sainsmart_20by4" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_20by4">
@@ -1884,36 +1889,51 @@
 		<!-- ******************** Communication *************** -->
 
 		<BlockGenus name="serial_read" kind="data" color="245 245 245" initlabel="bg.serial_read">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="serial_parseInt" kind="data" color="245 245 245" initlabel="bg.serial_parseInt">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="serial_read_poly" kind="data" color="245 245 245" initlabel="bg.serial_read">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="serial_available" kind="data" color="245 245 245" initlabel="bg.serial_available">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="serial_available2" kind="data" color="245 245 245" initlabel="bg.serial_available2">
+			<description>
+				<text></text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="serial_write" kind="command" color="245 245 245" initlabel="serial_write">
+		<BlockGenus name="serial_write" kind="command" color="245 245 245" initlabel="bg.serial_write">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -4922,7 +4942,7 @@
 					<DefaultArg genus-name="number" label="7" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
-					<DefaultArg genus-name="digital-on" label="Allumé" />
+					<DefaultArg genus-name="digital-on" label="Allume" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -5017,7 +5037,7 @@
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
-					<DefaultArg genus-name="digital-on" label="allumé" />
+					<DefaultArg genus-name="digital-on" label="allume" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -5589,7 +5609,7 @@
 					<DefaultArg genus-name="number" label="7" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
-					<DefaultArg genus-name="digital-on" label="Allumé" />
+					<DefaultArg genus-name="digital-on" label="Allume" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5653,7 +5673,7 @@
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
-					<DefaultArg genus-name="digital-on" label="Allumé" />
+					<DefaultArg genus-name="digital-on" label="Allume" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -10350,7 +10370,7 @@
 			<FamilyMember>string_equalsIgnoreCase</FamilyMember>
 			<FamilyMember>string_compareTo</FamilyMember>
 		</BlockFamily>
-				<BlockFamily>
+		<BlockFamily>
 			<FamilyMember>equal_string</FamilyMember>
 			<FamilyMember>not_equal_string</FamilyMember>
 		</BlockFamily>
@@ -10785,7 +10805,7 @@
 			<FamilyMember>Midi_AS</FamilyMember>
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
-		
+
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -10880,6 +10900,7 @@
 				<BlockGenusMember>number_double</BlockGenusMember>
 				<BlockGenusMember>setter_variable_char</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
+				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>variable_string</BlockGenusMember>
 				<BlockGenusMember>setter_variable_String</BlockGenusMember>
 				<BlockGenusMember>variable_String</BlockGenusMember>
@@ -10887,8 +10908,6 @@
 				<BlockGenusMember>create_variable_vector</BlockGenusMember>
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
-				<BlockGenusMember>setter_variable_char</BlockGenusMember>
-				<BlockGenusMember>variable_poly</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
