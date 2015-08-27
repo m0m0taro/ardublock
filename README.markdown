@@ -10,6 +10,9 @@ Preliminary
 * Add `JAVA_HOME` environment variable pointing to JDK directory (e.g., `JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_31"`)
 * Clone `https://github.com/taweili/openblocks.git` and run `mvn install`
 
+If you have problem click twice to drag a block in JAVA8, try this repository.
+* Clone `https://github.com/m0m0taro/openblocks.git` and run `mvn install`
+
 Installation
 ----
 The project is managed by Maven. After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository. 
