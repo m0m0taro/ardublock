@@ -1570,7 +1570,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_poly" label="bc.variable_string" />
+					<DefaultArg genus-name="variable_poly" label="char variable name" />
 				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.char">
 					<DefaultArg genus-name="char" label="A" />
