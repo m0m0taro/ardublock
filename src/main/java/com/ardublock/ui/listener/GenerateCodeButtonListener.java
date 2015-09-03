@@ -95,7 +95,7 @@ public class GenerateCodeButtonListener implements ActionListener
 				{
 					loopBlockSet.add(renderableBlock);
 				}
-				if (block.getGenusName().equals("subroutine"))
+				if ((block.getGenusName().equals("subroutine")) || (block.getGenusName().equals("subroutine-arg")))
 				{
 					String functionName = block.getBlockLabel().trim();
 					try

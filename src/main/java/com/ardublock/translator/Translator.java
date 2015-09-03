@@ -394,7 +394,7 @@ public class Translator
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
-				if (block.getGenusName().equals("subroutine"))
+				if ((block.getGenusName().equals("subroutine")) || (block.getGenusName().equals("subroutine-arg")))
 				{
 					String functionName = block.getBlockLabel().trim();
 					this.addFunctionName(block.getBlockID(), functionName);
