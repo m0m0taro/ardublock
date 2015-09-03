@@ -32,7 +32,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="variable name" />
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.start">
 					<DefaultArg genus-name="number" label="1" />
@@ -182,7 +182,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="variable name" />
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
@@ -1468,7 +1468,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="integer variable name" />
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0" />
@@ -1482,7 +1482,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_unsigned_long" label="Large integer variable name" />
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="bg.variable_number_unsigned_long" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_long" label="1000000" />
@@ -1496,7 +1496,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_double" label="Decimal variable name" />
+	          <DefaultArg genus-name="variable_number_double" label="bg.variable_number_double" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_double" label="3.1415927" />
@@ -1510,7 +1510,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_digital" label="digital variable name" />
+					<DefaultArg genus-name="variable_digital" label="bg.variable_digital" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="digital-high" label="HIGH" />
@@ -1538,7 +1538,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="array variable name" />
+					<DefaultArg genus-name="variable_fake" label="bg.variable_vector" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.vecsize">
 					<DefaultArg genus-name="number" label="1" />
@@ -1553,7 +1553,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="array variable name" />
+					<DefaultArg genus-name="variable_fake" label="bg.variable_vector" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.position">
 					<DefaultArg genus-name="number" label="1" />
@@ -1570,7 +1570,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_poly" label="char variable name" />
+					<DefaultArg genus-name="variable_poly" label="bg.variable_poly" />
 				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.char">
 					<DefaultArg genus-name="char" label="A" />
@@ -1607,7 +1607,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_String" label="String variable name" />
+	          <DefaultArg genus-name="variable_String" label="bg.variable_String" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="message" label="message" />
