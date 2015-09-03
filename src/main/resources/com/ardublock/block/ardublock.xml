@@ -204,6 +204,36 @@
 				<text>invoke subroutine</text>
 			</description>
 		</BlockGenus>
+
+		<BlockGenus name="subroutine-arg" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+			<description>
+				<text>subroutine with arguments</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="subroutine-arg-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
+			<description>
+				<text>invoke subroutine with arguments</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="delay_microseconds" kind="command" color="255 221 0" initlabel="bg.delay_microseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
@@ -10808,6 +10838,8 @@
 				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
+				<BlockGenusMember>subroutine-arg</BlockGenusMember>
+				<BlockGenusMember>subroutine-arg-ref</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
