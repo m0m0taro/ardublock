@@ -59,7 +59,7 @@ public class IrGetCodeBlock extends TranslatorBlock
 		addIrBlockCount(translator);
 		translator.registerBodyTranslateFinishCallback(this);
 		
-		translator.addHeaderFile("IRremote00.h");
+		translator.addHeaderFile("IRremote.h");
 		translator.addHeaderFile("ctype.h");
 		translator.addHeaderFile("Wire.h");
 		
