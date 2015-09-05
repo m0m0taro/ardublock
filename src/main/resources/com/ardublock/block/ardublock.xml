@@ -2319,9 +2319,38 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
-<!-- *************************************************************************************** -->		
 
+		<!-- DuinoEDU -->
+		<BlockGenus name="DuinoEDU_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_not_equal" kind="data" color="214 169 54" initlabel="DuinoEDU_not_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_greater" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_greater" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_less" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_less" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_greater_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_greater_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_less_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_less_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
 
 		<BlockGenus name="DuinoEDU_D2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D2" editable-label="no">
 			<BlockConnectors>
@@ -2506,7 +2535,6 @@
 
 		<!-- end of DuinoEDU -->
 		
-<!-- *************************************************************************************** -->		
 
 		<!-- *** Networking *** -->
 		<BlockGenus name="bleshield" kind="command" color="169 148 212" initlabel="bg.bleshield">
@@ -2563,8 +2591,6 @@
 				</Image>
 			</Images>
 			</BlockGenus>
-
-<!-- *************************************************************************************** -->		
 
 	<!-- Jerusalab -->
 		<BlockGenus name="midi_command" kind="command" color="191 77 169" initlabel="bg.midi_command">
@@ -2787,6 +2813,14 @@
 			<FamilyMember>PINH</FamilyMember>
 			<FamilyMember>PINL</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_not_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_greater</FamilyMember>
+			<FamilyMember>DuinoEDU_less</FamilyMember>
+			<FamilyMember>DuinoEDU_greater_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_less_equal</FamilyMember>
+		</BlockFamily>	
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_D2</FamilyMember>
 			<FamilyMember>DuinoEDU_D3</FamilyMember>

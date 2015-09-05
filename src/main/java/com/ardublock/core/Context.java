@@ -36,7 +36,6 @@ public class Context
 {
 	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
 	public final static String ARDUBLOCK_LANG_PATH = "/com/ardublock/block/ardublock.xml";
-	public final static String DEFAULT_ARDUBLOCK_PROGRAM_PATH = "/com/ardublock/default.abp";
 	public final static String ARDUINO_VERSION_UNKNOWN = "unknown";
 	public final boolean isNeedAutoFormat = true;
 	
@@ -134,45 +133,7 @@ public class Context
 	
 	private void loadDefaultArdublockProgram()
 	{
-		/*
-		InputStream defaultArdublockProgram = this.getClass().getResourceAsStream(DEFAULT_ARDUBLOCK_PROGRAM_PATH);
-		
-		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        final DocumentBuilder builder;
-        final Document doc;
-		try
-		{
-			builder = factory.newDocumentBuilder();
-			doc = builder.parse(defaultArdublockProgram);
-			final Element projectRoot = doc.getDocumentElement();
-			workspaceController.resetWorkspace();
-			workspaceController.loadProjectFromElement(projectRoot);
-		}
-		catch (ParserConfigurationException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		catch (SAXException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		catch (IllegalArgumentException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			workspaceController.loadFreshWorkspace();
-		}
-		catch (IOException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			workspaceController.loadFreshWorkspace();
-		}
-        */
-		
+
 		Workspace workspace = workspaceController.getWorkspace();
 		Page page = workspace.getPageNamed("Main");
 		
