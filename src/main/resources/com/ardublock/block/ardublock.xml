@@ -24,7 +24,6 @@
 		<BlockConnectorShape shape-type="cmd3" shape-number="17" />
 	</BlockConnectorShapes>
 	<BlockGenuses>
-		<BlockGenus name="dummy" kind="command" initlabel="" color="0 0 0" />
 	    <!-- ******************** NEW FOR LOOP **************** -->
 		<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
 			<description>
@@ -144,7 +143,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
+		<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
           <description>
             <text>
                 Do While Block
@@ -156,7 +155,7 @@
               <DefaultArg genus-name="less" label="Pick a test" />
             </BlockConnector>    
           </BlockConnectors>
-      </BlockGenus> 
+		</BlockGenus> 
 		
 		<BlockGenus name="break" kind="command" color="255 221 0" initlabel="bg.break">
 			<description>
@@ -190,6 +189,7 @@
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="subroutine" kind="command" color="180 220 50" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<description>
 				<text>subroutine</text>
@@ -275,7 +275,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		
 		<BlockGenus name="scoop_event_low" kind="data" color="26 97 218" initlabel="bg.scoop_event_low">
 			<description>
 				<text>event flag</text>
@@ -284,6 +283,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="scoop_event_high" kind="data" color="26 97 218" initlabel="bg.scoop_event_high">
 			<description>
 				<text>event flag</text>
@@ -292,6 +292,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="scoop_event_falling" kind="data" color="26 97 218" initlabel="bg.scoop_event_falling">
 			<description>
 				<text>event flag</text>
@@ -300,6 +301,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="scoop_event_rising" kind="data" color="26 97 218" initlabel="bg.scoop_event_rising">
 			<description>
 				<text>event flag</text>
@@ -308,6 +310,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="scoop_event_change" kind="data" color="26 97 218" initlabel="bg.scoop_event_change">
 			<description>
 				<text>event flag</text>
@@ -316,9 +319,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
-		
-		
+
 		<BlockGenus name="scoop_pin_event" kind="command" color="26 97 218" initlabel="bg.scoop_pin_event" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>SCoop Event on pin</text>
@@ -334,8 +335,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		
-		
 		<!--****************** Pins *************** -->
 
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="bg.pin-read-digital">
@@ -349,7 +348,6 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
-
 
 		<BlockGenus name="pin-read-digital-pullup" kind="command" color="77 191 169" initlabel="bg.pin-write-digital">
 			<description>
@@ -1895,8 +1893,6 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
-	
 
 		<!-- ******************** Communication *************** -->
 
@@ -2272,7 +2268,7 @@
 		<!-- </BlockConnector> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
-
+		<!-- -->
 		<!-- <BlockGenus name="sd_return" kind="data" color="255 255 0" -->
 		<!-- initlabel="bg.sd_return" editable-label="no"> -->
 		<!-- <BlockConnectors> -->
@@ -2287,6 +2283,7 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+
 		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
@@ -2465,9 +2462,8 @@
 				<text>send message via Serial port</text>
 			</description>
 		</BlockGenus>
-		
-		
-		
+
+
 		<!--************************************************************** TinkerKit! ********************************************************************** -->
 		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
 			<description>
@@ -3086,7 +3082,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
 
 		<BlockGenus name="df_pizeo_disk_vibration_sensor" kind="data" color="255 102 0" initlabel="bg.df_pizeo_disk_vibration_sensor">
 			<description>
