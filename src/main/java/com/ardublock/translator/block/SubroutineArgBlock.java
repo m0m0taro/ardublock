@@ -22,29 +22,13 @@ public class SubroutineArgBlock extends TranslatorBlock
 		String ArgDeclair;
 
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		firstArg = ArgDeclair(translatorBlock) + " " + translatorBlock.toCode();
 
-				if (translatorBlock instanceof VariableNumberUnsignedLongBlock) {
-						ArgDeclair = "long";
-				} else {
-						ArgDeclair = "int";
-				}
-
-		firstArg = ArgDeclair + " " + translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		secondArg = ArgDeclair(translatorBlock) + " " + translatorBlock.toCode();
 
-				if (translatorBlock instanceof VariableNumberUnsignedLongBlock) {
-						ArgDeclair = "long";
-				} else {
-						ArgDeclair = "int";
-				}
-
-		if (translatorBlock != null ) {
-			secondArg = " , " + ArgDeclair + " " + translatorBlock.toCode();
-		} else {
-			secondArg = null;
-		}
 		String ret;
-		ret = "void " + subroutineName + "( " + firstArg + secondArg + " )\n{\n";
+		ret = "void " + subroutineName + "(" + firstArg + " , " + secondArg + ")\n{\n";
 		translatorBlock = getTranslatorBlockAtSocket(2);
 		while (translatorBlock != null)
 		{
@@ -53,5 +37,24 @@ public class SubroutineArgBlock extends TranslatorBlock
 		}
 		ret = ret + "}\n\n";
 		return ret;
+	}
+	private String ArgDeclair( TranslatorBlock translatorBlock ) {
+			String argDeclair;
+		if (translatorBlock instanceof VariableNumberUnsignedLongBlock) {
+			argDeclair = "long";
+		} else if (translatorBlock instanceof VariableNumberDoubleBlock) {
+			argDeclair = "double";
+		} else if (translatorBlock instanceof VariableDigitalBlock) {
+			argDeclair = "bool";
+		} else if (translatorBlock instanceof VariablePolyBlock) {
+			argDeclair = "char";
+		} else if (translatorBlock instanceof VariableStringBlock) {
+			argDeclair = "char*";
+		} else if (translatorBlock instanceof variable_String) {
+			argDeclair = "String";
+		} else {
+			argDeclair = "int";
+		}
+		return argDeclair;
 	}
 }

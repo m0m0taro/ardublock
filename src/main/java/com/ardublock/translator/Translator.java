@@ -77,14 +77,14 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		if (!functionNameSet.isEmpty())
-		{
-			for (String functionName:functionNameSet)
-			{
-				headerCommand.append("void " + functionName + "();\n");
-			}
-			headerCommand.append("\n");
-		}
+	//	if (!functionNameSet.isEmpty())
+	//	{
+	//		for (String functionName:functionNameSet)
+	//		{
+	//			headerCommand.append("void " + functionName + "();\n");
+	//		}
+	//		headerCommand.append("\n");
+	//	}
 		
 		return headerCommand.toString() + generateSetupFunction();
 	}

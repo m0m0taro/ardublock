@@ -28,7 +28,7 @@ public class SubroutineArgRefBlock extends TranslatorBlock
 		{
 			throw new SubroutineNotDeclaredException(blockId);
 		}
-		return "\t"+subroutineName + "( " + firstArg + " , " + secondArg + ");\n";
+		return "\t"+subroutineName + "(" + firstArg + " , " + secondArg + ");\n";
 	}
 
 }
