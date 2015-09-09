@@ -19,17 +19,21 @@ public class SubroutineArgBlock extends TranslatorBlock
 
 		String firstArg;
 		String secondArg;
+		String thirdArg;
 		String ArgDeclair;
 
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		firstArg = ArgDeclair(translatorBlock) + " " + translatorBlock.toCode();
+		firstArg = ArgDeclair(translatorBlock) + " &" + translatorBlock.toCode();
 
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		secondArg = ArgDeclair(translatorBlock) + " " + translatorBlock.toCode();
+		secondArg = ArgDeclair(translatorBlock) + " &" + translatorBlock.toCode();
+
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
+		thirdArg  = ArgDeclair(translatorBlock) + " &" + translatorBlock.toCode();
 
 		String ret;
-		ret = "void " + subroutineName + "(" + firstArg + " , " + secondArg + ")\n{\n";
-		translatorBlock = getTranslatorBlockAtSocket(2);
+		ret = "void " + subroutineName + "(" + firstArg + " , " + secondArg + " , " + thirdArg + ")\n{\n";
+		translatorBlock = getTranslatorBlockAtSocket(3);
 		while (translatorBlock != null)
 		{
 			ret = ret + translatorBlock.toCode();
@@ -38,6 +42,7 @@ public class SubroutineArgBlock extends TranslatorBlock
 		ret = ret + "}\n\n";
 		return ret;
 	}
+
 	private String ArgDeclair( TranslatorBlock translatorBlock ) {
 			String argDeclair;
 		if (translatorBlock instanceof VariableNumberUnsignedLongBlock) {
@@ -45,11 +50,11 @@ public class SubroutineArgBlock extends TranslatorBlock
 		} else if (translatorBlock instanceof VariableNumberDoubleBlock) {
 			argDeclair = "double";
 		} else if (translatorBlock instanceof VariableDigitalBlock) {
-			argDeclair = "bool";
+			argDeclair = "boolean";
 		} else if (translatorBlock instanceof VariablePolyBlock) {
 			argDeclair = "char";
-		} else if (translatorBlock instanceof VariableStringBlock) {
-			argDeclair = "char*";
+	//	} else if (translatorBlock instanceof VariableStringBlock) {
+	//		argDeclair = "char";
 		} else if (translatorBlock instanceof variable_String) {
 			argDeclair = "String";
 		} else {

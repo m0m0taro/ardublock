@@ -216,6 +216,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
 					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.commands" />
 			</BlockConnectors>
 		</BlockGenus>
@@ -225,6 +228,9 @@
 				<text>invoke subroutine with arguments</text>
 			</description>
 			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
+					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.argument">
 					<DefaultArg genus-name="variable_number" label="bg.variable_number" />
 				</BlockConnector>
