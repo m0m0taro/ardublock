@@ -2930,7 +2930,7 @@
 
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
-			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
+			<BlockDrawer button-color="255 255 0" name="bd.control" type="factory" is-open="yes">
 				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>setup</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
@@ -2939,6 +2939,8 @@
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="240 220 0" name="bd.repeat" type="factory">
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>do_while</BlockGenusMember>
