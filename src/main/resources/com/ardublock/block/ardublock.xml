@@ -2930,7 +2930,7 @@
 
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
-			<BlockDrawer button-color="255 255 0" name="bd.control" type="factory" is-open="yes">
+			<BlockDrawer name="bd.control" type="factory" button-color="255 255 0" is-open="yes">
 				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>setup</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
@@ -2940,7 +2940,7 @@
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="240 220 0" name="bd.repeat" type="factory">
+			<BlockDrawer name="bd.repeat" button-color="240 220 0" type="factory">
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>do_while</BlockGenusMember>
@@ -2948,7 +2948,7 @@
 				<BlockGenusMember>repeat_control</BlockGenusMember>
 				<BlockGenusMember>break</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
+			<BlockDrawer name="bd.pins" button-color="29 152 155" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
@@ -2962,7 +2962,7 @@
 				<BlockGenusMember>PORT_FIX</BlockGenusMember>
 				<BlockGenusMember>PINA</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
+			<BlockDrawer name="bd.logic" button-color="255 163 82" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
 				<BlockGenusMember>less</BlockGenusMember>
 				<BlockGenusMember>equal</BlockGenusMember>
@@ -2982,7 +2982,7 @@
 				<BlockGenusMember>string_empty</BlockGenusMember>
 				<BlockGenusMember>string_toInt</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
+			<BlockDrawer name="bd.operators" button-color="114 147 71" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
 				<BlockGenusMember>subtraction</BlockGenusMember>
 				<BlockGenusMember>multiplication</BlockGenusMember>
@@ -2999,7 +2999,7 @@
 				<BlockGenusMember>toint</BlockGenusMember>
 				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
+			<BlockDrawer name="bd.number" button-color="232 156 149" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
@@ -3025,13 +3025,13 @@
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="135 200 35" name="bd.subroutine" type="factory">
+			<BlockDrawer name="bd.subroutine" button-color="135 200 35" type="factory">
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>subroutine-arg</BlockGenusMember>
 				<BlockGenusMember>subroutine-arg-ref</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
+			<BlockDrawer name="bd.utilities" button-color="205 133 63" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
@@ -3041,7 +3041,7 @@
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
 				<BlockGenusMember>midi_command</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
+			<BlockDrawer name="bd.communication" button-color="255 255 255" type="factory">
 				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
@@ -3056,7 +3056,7 @@
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
+			<BlockDrawer name="bd.storage" button-color="0 50 45" type="factory">
 				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
 				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
 				<BlockGenusMember>eeprom_read_long</BlockGenusMember>
@@ -3068,18 +3068,18 @@
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
 			</BlockDrawer>
-			<BlockDrawer button-color="169 148 212" name="bd.network" type="factory">
+			<BlockDrawer name="bd.network" button-color="169 148 212" type="factory">
 				<BlockGenusMember>bleshield</BlockGenusMember>
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
 				<BlockGenusMember>bleshield_compare</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
+			<BlockDrawer name="bd.especial" button-color="120 120 120" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="26 97 218" name="bd.scoop">
+			<BlockDrawer name="bd.scoop" button-color="26 97 218" >
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
 				<BlockGenusMember>scoop_loop</BlockGenusMember>
 				<BlockGenusMember>scoop_sleep</BlockGenusMember>
