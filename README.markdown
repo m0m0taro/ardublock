@@ -11,7 +11,7 @@ Preliminary
 * Clone `https://github.com/taweili/openblocks.git` and run `mvn install`
 
 If you have problem click twice to drag a block in JAVA8, try this repository.
-* Clone `https://github.com/m0m0taro/openblocks.git` and run `mvn install`
+* Clone `https://github.com/m0m0taro/openblocks.git` and run `mvn clean install`
 
 Installation
 ----

@@ -20,18 +20,26 @@ public class SubroutineArgRefBlock extends TranslatorBlock
 		String firstArg;
 		String secondArg;
 		String thirdArg;
+		String ret;
 
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			firstArg = translatorBlock.toCode();
+
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			secondArg = translatorBlock.toCode();
+
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			thirdArg = translatorBlock.toCode();
+
 		if (!translator.containFunctionName(subroutineName))
 		{
 			throw new SubroutineNotDeclaredException(blockId);
 		}
-		return "\t"+subroutineName + "(" + firstArg + " , " + secondArg + " , " + thirdArg + ");\n";
+
+		ret = "\t"+subroutineName + "(" + firstArg + " , " + secondArg + " , " + thirdArg + ");\n";
+		ret = ret.replace("boolean& ","").replace("char& ","").replace("char* ","").replace("String& ","");
+
+		return ret;
 	}
 
 }

@@ -48,19 +48,21 @@ public class SubroutineArgBlock extends TranslatorBlock
 		String argDeclair;
 
 		if (translatorBlock instanceof VariableNumberUnsignedLongBlock) {
-			argDeclair = "unsigned long&";
+			argDeclair = "unsigned long& ";
 		} else if (translatorBlock instanceof VariableNumberDoubleBlock) {
-			argDeclair = "double&";
+			argDeclair = "double& ";
 		} else if (translatorBlock instanceof VariableDigitalBlock) {
-			argDeclair = "boolean&";
+			argDeclair = "boolean& ";
 		} else if (translatorBlock instanceof VariablePolyBlock) {
-			argDeclair = "char&";
+			argDeclair = "char& ";
 		} else if (translatorBlock instanceof VariableStringBlock) {
-			argDeclair = "char*";
+			argDeclair = "char* ";
 		} else if (translatorBlock instanceof variable_String) {
-			argDeclair = "String&";
+			argDeclair = "String& ";
+		} else if (translatorBlock instanceof SubroutineArgGlueBlock) {
+			argDeclair = "";
 		} else {
-			argDeclair = "int&";
+			argDeclair = "int& ";
 		}
 		return argDeclair;
 	}
