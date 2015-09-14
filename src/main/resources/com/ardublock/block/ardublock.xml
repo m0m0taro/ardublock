@@ -255,6 +255,36 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="subroutine_glue_boolean" kind="data" color="180 220 50" initlabel="bg.subroutine_glue_boolean">
+			<description>
+				<text>just adopts argument socket</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="subroutine_glue_poly" kind="data" color="180 220 50" initlabel="bg.subroutine_glue_poly">
+			<description>
+				<text>just adopts argument socket</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="subroutine_glue_String" kind="data" color="180 220 50" initlabel="bg.suroutine_glue_String" editable-label="no">
+			<description>
+				<text>just adopts argument socket</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="delay_microseconds" kind="command" color="255 221 0" initlabel="bg.delay_microseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
@@ -3030,6 +3060,9 @@
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>subroutine-arg</BlockGenusMember>
 				<BlockGenusMember>subroutine-arg-ref</BlockGenusMember>
+				<BlockGenusMember>subroutine_glue_boolean</BlockGenusMember>
+				<BlockGenusMember>subroutine_glue_poly</BlockGenusMember>
+				<BlockGenusMember>subroutine_glue_String</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer name="bd.utilities" button-color="205 133 63" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
